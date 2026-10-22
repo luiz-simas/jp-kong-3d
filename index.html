@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JP Kong 3D — O Resgate da Baby Kong</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-wrap">
+  <canvas id="game" aria-label="Jogo JP Kong"></canvas>
+  <div id="vignette"></div>
+  <div id="hud">
+    <div class="brand">🍌 JP KONG <small>O RESGATE DA BABY KONG</small></div>
+    <div class="stats">
+      <span id="banana-count">🍌 0/0</span>
+      <span id="health">❤️ 3</span>
+      <span id="level">FASE 1/20</span>
+      <span id="heals">💚 Cura: 2</span>
+    </div>
+    <div id="status">Colete bananas para abrir a jaula!</div>
+    <div id="bossbar" class="hidden"><span id="bossname">B-KONG</span><div class="bar"><div id="bossfill"></div></div></div>
+  </div>
+  <div id="banner" class="hidden"></div>
+  <div id="start-screen" class="overlay">
+    <div class="dialog">
+      <div class="eyebrow">JOGO ORIGINAL • JOSHUA &amp; PAPAI</div>
+      <h1>JP KONG 3D</h1>
+      <p class="story">O malvado <b>B-Kong</b> prendeu a <b>Baby Kong</b>, irmãzinha do JP Kong, numa jaula no fundo da selva!
+      Atravesse as 20 fases, colete bananas, destrua rochas, cave tesouros e lute contra os bad guys.
+      No fim, derrote o B-Kong e a Queen Mighty — e descubra que o B-Kong, no fundo, é bonzinho. 🍌</p>
+      <label for="nickname">Seu nome</label>
+      <input id="nickname" maxlength="16" value="JP Kong" autocomplete="nickname">
+      <button id="play-btn">JOGAR AGORA</button>
+      <p class="small">Versão de navegador, 1 jogador. WASD/setas move • ESPAÇO pula • E = SMASH • Q = raio • R = cura • F = cavar</p>
+    </div>
+  </div>
+  <div id="upgrade-screen" class="overlay hidden">
+    <div class="dialog">
+      <div class="eyebrow">FASE COMPLETA! 🎉</div>
+      <h2>Escolha um upgrade</h2>
+      <div id="upgrade-cards"></div>
+    </div>
+  </div>
+  <div id="end-screen" class="overlay hidden">
+    <div class="dialog">
+      <h2 id="end-title">Fim de jogo</h2>
+      <p id="end-text"></p>
+      <button id="again-btn">JOGAR DE NOVO</button>
+    </div>
+  </div>
+  <div id="controls">
+    <span><b>WASD / setas</b> mover</span><span><b>ESPAÇO</b> pular</span><span><b>E</b> SMASH</span><span><b>Q</b> raio</span><span><b>R</b> cura</span><span><b>F</b> cavar</span>
+  </div>
+  <div id="mobile-controls">
+    <div class="pad">
+      <button data-key="ArrowLeft">◀</button><button data-key="ArrowUp">▲</button><button data-key="ArrowDown">▼</button><button data-key="ArrowRight">▶</button>
+    </div>
+    <div class="actions">
+      <button data-key="Space">PULAR</button><button data-key="KeyE">SMASH</button><button data-key="KeyQ">RAIO</button><button data-key="KeyF">CAVAR</button>
+    </div>
+  </div>
+</div>
+<script type="module" src="game.js"></script>
+</body>
+</html>
